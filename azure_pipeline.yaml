@@ -56,11 +56,11 @@ stages:
           pool:
             vmImage: ${{ variables.agentPool }}
           timeoutInMinutes: ${{ variables.timeoutInMinutes }}
-          condition: |
-                or(
-                and(succeeded(), eq(variables['Build.Reason'], 'PullRequest')),
-                and(succeeded(), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'))
-                )
+          # condition: |
+          #       or(
+          #       and(succeeded(), eq(variables['Build.Reason'], 'PullRequest')),
+          #       and(succeeded(), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'))
+          #       )
           steps:
             - task: TerraformInstaller@1
               displayName: 'Install Terraform'
