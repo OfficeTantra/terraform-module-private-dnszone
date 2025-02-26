@@ -100,7 +100,6 @@ stages:
                 publishPlanResults: ${{ deployment.tfPlanName }}
                 commandOptions: >
                     -out tfplan-${{ deployment.tfPlanName }}
-                    -var-file "./environments/${{ deployment.environment }}.tfvars"
                     -lock=false
               
             - task: TerraformTaskV4@4
