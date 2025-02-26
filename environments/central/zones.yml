@@ -6,7 +6,7 @@ zones:
 
     A: []
     cname: []
-  - name: "privatelink.blob.core.windows.ne"
+  - name: "privatelink.blob.core.windows.net"
     vnet_links:
       - link_name: "ot-vnet-staging"
         vnet_id: "/subscriptions/f591cfbf-e9bb-4d16-8007-31dc0cf12ab6/resourceGroups/ot-rg-staging/providers/Microsoft.Network/virtualNetworks/ot-vnet-staging"
